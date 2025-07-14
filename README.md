@@ -1,4 +1,3 @@
-# AI-Content-Safety-Agent
 # Sentinel AI Content Safety Agent
 
 **Owner:** Ryan Tham 

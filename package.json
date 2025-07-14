@@ -1,0 +1,72 @@
+{
+  "name": "sentinel-ai-content-safety",
+  "version": "1.0.0",
+  "description": "Intelligent real-time content safety system that proactively identifies and mitigates harmful trends across digital platforms",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "content-safety",
+    "ai",
+    "moderation",
+    "harmful-content",
+    "trend-detection",
+    "multi-modal",
+    "real-time"
+  ],
+  "author": "Ryan Tham",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.10.0",
+    "redis": "^4.6.7",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.4.0",
+    "bull": "^4.11.3",
+    "socket.io": "^4.7.2",
+    "jsonwebtoken": "^9.0.1",
+    "bcryptjs": "^2.4.3",
+    "joi": "^17.9.2",
+    "axios": "^1.4.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.32.4",
+    "@tensorflow/tfjs": "^4.10.0",
+    "@tensorflow/tfjs-node": "^4.10.0",
+    "openai": "^3.3.0",
+    "huggingface": "^1.0.0",
+    "compromise": "^14.10.0",
+    "sentiment": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/express": "^4.17.17",
+    "@types/cors": "^2.8.13",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/multer": "^1.4.7",
+    "@types/jest": "^29.5.3",
+    "typescript": "^5.1.6",
+    "ts-node": "^10.9.1",
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.45.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

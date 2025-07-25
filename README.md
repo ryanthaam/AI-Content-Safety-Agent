@@ -51,6 +51,24 @@ Sentinel AI is an intelligent, multi-modal, real-time system for detecting and a
 
 ---
 
+## 📚 Documentation
+
+### Technical Documentation
+- **[Technical README](TECHNICAL_README.md)** - Comprehensive technical overview, architecture, and setup
+- **[System Architecture](docs/ARCHITECTURE.md)** - Detailed architecture diagrams and component breakdown
+- **[API Documentation](docs/API_DOCUMENTATION.md)** - Complete API reference with examples
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Docker, Kubernetes, and cloud deployment instructions
+- **[Contributing Guidelines](CONTRIBUTING.md)** - Development workflow and contribution guide
+
+### Quick Links
+- 🏗️ [Architecture Overview](docs/ARCHITECTURE.md#system-architecture-diagram)
+- 🚀 [Quick Start Guide](TECHNICAL_README.md#quick-start)
+- 📡 [API Reference](docs/API_DOCUMENTATION.md#api-reference)
+- 🐳 [Docker Deployment](docs/DEPLOYMENT.md#docker-deployment)
+- 🤝 [How to Contribute](CONTRIBUTING.md#getting-started)
+
+---
+
 ## 👥 Target Users & Use Cases
 
 ### Primary Users

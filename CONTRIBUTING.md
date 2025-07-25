@@ -830,7 +830,7 @@ What actually happened.
 - OS: [e.g., macOS 12.0]
 - Node.js version: [e.g., 18.0.0]
 - Browser: [e.g., Chrome 96.0]
-- Version: [e.g., 1.0.0]
+- Version: [e.g., 2.0.0]
 
 ## Additional Context
 Add any other context about the problem here.
@@ -998,7 +998,7 @@ git merge main
 ```markdown
 # Changelog
 
-## [1.2.0] - 2024-01-15
+## [2.0.0] - 2025-07-25
 
 ### Added
 - Discord platform adapter for content ingestion

@@ -1,6 +1,6 @@
 {
   "name": "sentinel-ai-content-safety",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Intelligent real-time content safety system that proactively identifies and mitigates harmful trends across digital platforms",
   "main": "dist/index.js",
   "scripts": {

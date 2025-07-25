@@ -54,7 +54,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
   "error": {
     "code": "AUTHENTICATION_FAILED",
     "message": "Invalid credentials provided",
-    "timestamp": "2024-01-15T10:30:00Z"
+    "timestamp": "2025-07-25T10:30:00Z"
   }
 }
 ```
@@ -77,8 +77,8 @@ GET /content
 | `category` | string | Filter by detection category | - | `hate_speech` |
 | `status` | string | Filter by processing status | - | `flagged` |
 | `riskLevel` | string | Filter by risk level | - | `high` |
-| `dateFrom` | string | Start date (ISO 8601) | - | `2024-01-15T00:00:00Z` |
-| `dateTo` | string | End date (ISO 8601) | - | `2024-01-15T23:59:59Z` |
+| `dateFrom` | string | Start date (ISO 8601) | - | `2025-07-25T00:00:00Z` |
+| `dateTo` | string | End date (ISO 8601) | - | `2025-07-25T23:59:59Z` |
 | `limit` | number | Items per page | 20 | `50` |
 | `offset` | number | Items to skip | 0 | `100` |
 | `sortBy` | string | Sort field | `timestamp` | `riskScore` |
@@ -121,9 +121,9 @@ curl -X GET "https://api.sentinel-ai.com/v1/content?platform=twitter&category=ha
           "views": 450
         },
         "timestamps": {
-          "published": "2024-01-15T10:15:00Z",
-          "ingested": "2024-01-15T10:16:30Z",
-          "lastAnalyzed": "2024-01-15T10:17:00Z"
+          "published": "2025-07-25T10:15:00Z",
+          "ingested": "2025-07-25T10:16:30Z",
+          "lastAnalyzed": "2025-07-25T10:17:00Z"
         },
         "location": {
           "country": "US",
@@ -217,9 +217,9 @@ curl -X GET "https://api.sentinel-ai.com/v1/content/content_123" \
       "engagementRate": 0.10
     },
     "timestamps": {
-      "published": "2024-01-15T10:15:00Z",
-      "ingested": "2024-01-15T10:16:30Z",
-      "lastAnalyzed": "2024-01-15T10:17:00Z"
+      "published": "2025-07-25T10:15:00Z",
+      "ingested": "2025-07-25T10:16:30Z",
+      "lastAnalyzed": "2025-07-25T10:17:00Z"
     },
     "location": {
       "country": "US",
@@ -252,7 +252,7 @@ curl -X GET "https://api.sentinel-ai.com/v1/content/content_123" \
       "humanReviewRequired": true,
       "reviewHistory": [
         {
-          "timestamp": "2024-01-15T10:17:00Z",
+          "timestamp": "2025-07-25T10:17:00Z",
           "action": "flagged_by_system",
           "confidence": 0.87
         }
@@ -314,8 +314,8 @@ curl -X POST "https://api.sentinel-ai.com/v1/content/content_123/analyze" \
     "analysisId": "analysis_789",
     "contentId": "content_123",
     "status": "completed",
-    "startTime": "2024-01-15T10:20:00Z",
-    "completionTime": "2024-01-15T10:20:02Z",
+    "startTime": "2025-07-25T10:20:00Z",
+    "completionTime": "2025-07-25T10:20:02Z",
     "result": {
       "overallScore": 0.89,
       "overallRisk": "high",
@@ -407,7 +407,7 @@ POST /content/batch-analyze
     "status": "processing",
     "totalItems": 3,
     "completedItems": 0,
-    "estimatedCompletionTime": "2024-01-15T10:25:00Z",
+    "estimatedCompletionTime": "2025-07-25T10:25:00Z",
     "results": [],
     "progress": {
       "queued": 3,
@@ -433,8 +433,8 @@ GET /content/batch-analyze/{batchId}
     "status": "completed",
     "totalItems": 3,
     "completedItems": 3,
-    "startTime": "2024-01-15T10:20:00Z",
-    "completionTime": "2024-01-15T10:22:30Z",
+    "startTime": "2025-07-25T10:20:00Z",
+    "completionTime": "2025-07-25T10:22:30Z",
     "results": [
       {
         "contentId": "content_123",
@@ -506,8 +506,8 @@ curl -X GET "https://api.sentinel-ai.com/v1/analysis/trends?timeframe=1h&platfor
   "data": {
     "timeframe": {
       "duration": "1h",
-      "start": "2024-01-15T09:30:00Z",
-      "end": "2024-01-15T10:30:00Z"
+      "start": "2025-07-25T09:30:00Z",
+      "end": "2025-07-25T10:30:00Z"
     },
     "summary": {
       "totalTrends": 15,
@@ -532,7 +532,7 @@ curl -X GET "https://api.sentinel-ai.com/v1/analysis/trends?timeframe=1h&platfor
           "acceleration": 12.8,
           "contentCount": 1850,
           "engagementGrowth": 0.35,
-          "peakTime": "2024-01-15T10:15:00Z"
+          "peakTime": "2025-07-25T10:15:00Z"
         },
         "geographic": {
           "regions": ["North America", "Europe"],
@@ -556,7 +556,7 @@ curl -X GET "https://api.sentinel-ai.com/v1/analysis/trends?timeframe=1h&platfor
           "averageEngagement": 67.6,
           "viralityScore": 0.89
         },
-        "firstDetected": "2024-01-15T09:45:00Z",
+        "firstDetected": "2025-07-25T09:45:00Z",
         "timeToDetection": "12 minutes",
         "correlations": [
           {
@@ -646,7 +646,7 @@ POST /analysis/trends/analyze
   "data": {
     "analysisId": "analysis_123",
     "status": "queued",
-    "estimatedCompletionTime": "2024-01-15T10:35:00Z",
+    "estimatedCompletionTime": "2025-07-25T10:35:00Z",
     "parameters": {
       "timeframe": "1h",
       "platforms": ["twitter", "youtube"],
@@ -686,8 +686,8 @@ curl -X GET "https://api.sentinel-ai.com/v1/analysis/trends/summary/24h" \
   "data": {
     "timeframe": "24h",
     "period": {
-      "start": "2024-01-14T10:30:00Z",
-      "end": "2024-01-15T10:30:00Z"
+      "start": "2025-07-24T10:30:00Z",
+      "end": "2025-07-25T10:30:00Z"
     },
     "overview": {
       "totalTrends": 89,
@@ -736,7 +736,7 @@ curl -X GET "https://api.sentinel-ai.com/v1/analysis/trends/summary/24h" \
     },
     "timelineData": [
       {
-        "hour": "2024-01-15T09:00:00Z",
+        "hour": "2025-07-25T09:00:00Z",
         "trendsDetected": 4,
         "contentVolume": 25000,
         "riskScore": 0.45
@@ -765,8 +765,8 @@ GET /alerts
 | `category` | string | Filter by category | - | `hate_speech` |
 | `platform` | string | Filter by platform | - | `twitter` |
 | `assignee` | string | Filter by assignee | - | `user_123` |
-| `dateFrom` | string | Start date | - | `2024-01-15T00:00:00Z` |
-| `dateTo` | string | End date | - | `2024-01-15T23:59:59Z` |
+| `dateFrom` | string | Start date | - | `2025-07-25T00:00:00Z` |
+| `dateTo` | string | End date | - | `2025-07-25T23:59:59Z` |
 | `limit` | number | Items per page | 20 | `50` |
 | `offset` | number | Items to skip | 0 | `100` |
 
@@ -829,9 +829,9 @@ curl -X GET "https://api.sentinel-ai.com/v1/alerts?severity=high&status=open&lim
           ]
         },
         "timestamps": {
-          "created": "2024-01-15T10:15:00Z",
-          "lastUpdated": "2024-01-15T10:20:00Z",
-          "escalationDeadline": "2024-01-15T11:00:00Z"
+          "created": "2025-07-25T10:15:00Z",
+          "lastUpdated": "2025-07-25T10:20:00Z",
+          "escalationDeadline": "2025-07-25T11:00:00Z"
         },
         "assignee": null,
         "priority": "urgent",
@@ -878,7 +878,7 @@ GET /alerts/{alertId}
     "source": "trend_analysis",
     "sourceDetails": {
       "trendId": "trend_789",
-      "detectionTime": "2024-01-15T10:15:00Z",
+      "detectionTime": "2025-07-25T10:15:00Z",
       "triggerRules": ["velocity_spike", "risk_threshold_exceeded"]
     },
     "platforms": ["tiktok", "instagram", "youtube"],
@@ -893,17 +893,17 @@ GET /alerts/{alertId}
     },
     "timeline": [
       {
-        "timestamp": "2024-01-15T09:45:00Z",
+        "timestamp": "2025-07-25T09:45:00Z",
         "event": "trend_detected",
         "details": "Initial trend detection on TikTok"
       },
       {
-        "timestamp": "2024-01-15T10:00:00Z",
+        "timestamp": "2025-07-25T10:00:00Z",
         "event": "cross_platform_spread",
         "details": "Trend spreading to Instagram and YouTube"
       },
       {
-        "timestamp": "2024-01-15T10:15:00Z",
+        "timestamp": "2025-07-25T10:15:00Z",
         "event": "alert_triggered",
         "details": "Critical alert triggered due to rapid growth"
       }
@@ -969,7 +969,7 @@ POST /alerts/{alertId}/acknowledge
   "acknowledgedBy": "user_123",
   "comment": "Investigating with platform partners. Escalating to safety teams.",
   "action": "escalate_to_platforms",
-  "estimatedResolutionTime": "2024-01-15T12:00:00Z",
+  "estimatedResolutionTime": "2025-07-25T12:00:00Z",
   "assignTo": "user_456",
   "priority": "urgent"
 }
@@ -984,11 +984,11 @@ POST /alerts/{alertId}/acknowledge
     "alertId": "alert_456",
     "status": "acknowledged",
     "acknowledgedBy": "user_123",
-    "acknowledgedAt": "2024-01-15T10:25:00Z",
+    "acknowledgedAt": "2025-07-25T10:25:00Z",
     "assignedTo": "user_456",
     "comment": "Investigating with platform partners. Escalating to safety teams.",
-    "estimatedResolutionTime": "2024-01-15T12:00:00Z",
-    "nextReviewAt": "2024-01-15T11:00:00Z",
+    "estimatedResolutionTime": "2025-07-25T12:00:00Z",
+    "nextReviewAt": "2025-07-25T11:00:00Z",
     "actionTaken": "escalate_to_platforms",
     "trackingId": "track_789"
   }
@@ -1015,7 +1015,7 @@ PUT /alerts/{alertId}/status
     "Public advisory issued through official channels"
   ],
   "updatedBy": "user_456",
-  "resolutionTime": "2024-01-15T11:45:00Z"
+  "resolutionTime": "2025-07-25T11:45:00Z"
 }
 ```
 
@@ -1038,8 +1038,8 @@ GET /dashboard/overview
     "systemStatus": {
       "status": "operational",
       "uptime": "99.95%",
-      "lastIncident": "2024-01-10T15:30:00Z",
-      "nextMaintenance": "2024-01-20T02:00:00Z"
+      "lastIncident": "2025-07-20T15:30:00Z",
+      "nextMaintenance": "2025-08-01T02:00:00Z"
     },
     "processing": {
       "contentIngested24h": 2450000,
@@ -1077,26 +1077,26 @@ GET /dashboard/overview
         "status": "operational",
         "contentIngested": 1200000,
         "apiHealth": 0.99,
-        "lastSync": "2024-01-15T10:29:00Z"
+        "lastSync": "2025-07-25T10:29:00Z"
       },
       "youtube": {
         "status": "operational", 
         "contentIngested": 450000,
         "apiHealth": 0.97,
-        "lastSync": "2024-01-15T10:28:00Z"
+        "lastSync": "2025-07-25T10:28:00Z"
       },
       "instagram": {
         "status": "degraded",
         "contentIngested": 380000,
         "apiHealth": 0.85,
-        "lastSync": "2024-01-15T10:15:00Z",
+        "lastSync": "2025-07-25T10:15:00Z",
         "issues": ["Rate limiting active"]
       },
       "tiktok": {
         "status": "operational",
         "contentIngested": 420000,
         "apiHealth": 0.98,
-        "lastSync": "2024-01-15T10:30:00Z"
+        "lastSync": "2025-07-25T10:30:00Z"
       }
     },
     "aiModels": {
@@ -1154,7 +1154,7 @@ GET /dashboard/metrics
         "peakLatency": 245,
         "throughputTimeseries": [
           {
-            "timestamp": "2024-01-15T09:00:00Z",
+            "timestamp": "2025-07-25T09:00:00Z",
             "value": 98500
           }
         ],
@@ -1204,13 +1204,13 @@ GET /dashboard/metrics
       "resources": {
         "cpuUtilization": [
           {
-            "timestamp": "2024-01-15T09:00:00Z",
+            "timestamp": "2025-07-25T09:00:00Z",
             "value": 65.2
           }
         ],
         "memoryUsage": [
           {
-            "timestamp": "2024-01-15T09:00:00Z", 
+            "timestamp": "2025-07-25T09:00:00Z", 
             "value": 78.5
           }
         ],
@@ -1245,7 +1245,7 @@ socket.on('metrics_update', (data) => {
   /*
   {
     "type": "metrics_update",
-    "timestamp": "2024-01-15T10:30:15Z",
+    "timestamp": "2025-07-25T10:30:15Z",
     "data": {
       "processing": {
         "currentQueueSize": 1485,
@@ -1319,7 +1319,7 @@ GET /dashboard/platforms/{platform}
         "failedCalls": 23,
         "averageResponseTime": 245,
         "rateLimitHits": 12,
-        "lastError": "2024-01-15T08:45:00Z"
+        "lastError": "2025-07-25T08:45:00Z"
       },
       "trends": {
         "activeTrends": 8,
@@ -1340,7 +1340,7 @@ GET /dashboard/platforms/{platform}
     },
     "recentActivity": [
       {
-        "timestamp": "2024-01-15T10:25:00Z",
+        "timestamp": "2025-07-25T10:25:00Z",
         "type": "high_volume_detected",
         "details": "Spike in content volume detected (150% above average)"
       }
@@ -1362,7 +1362,7 @@ All API errors follow a consistent format:
     "code": "ERROR_CODE",
     "message": "Human-readable error message",
     "details": "Additional error details if available",
-    "timestamp": "2024-01-15T10:30:00Z",
+    "timestamp": "2025-07-25T10:30:00Z",
     "requestId": "req_123456",
     "path": "/api/v1/content/invalid_id"
   }
@@ -1403,7 +1403,7 @@ Rate limit exceeded response:
     "code": "RATE_LIMIT_EXCEEDED",
     "message": "Rate limit exceeded. Maximum 1000 requests per hour.",
     "retryAfter": 3600,
-    "timestamp": "2024-01-15T10:30:00Z"
+    "timestamp": "2025-07-25T10:30:00Z"
   }
 }
 ```

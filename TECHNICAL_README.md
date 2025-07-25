@@ -416,8 +416,8 @@ GET /api/v1/content?platform=twitter&category=hate_speech&limit=50&offset=0&sort
         }
       },
       "timestamps": {
-        "published": "2024-01-15T10:30:00Z",
-        "ingested": "2024-01-15T10:31:00Z"
+        "published": "2025-07-25T10:30:00Z",
+        "ingested": "2025-07-25T10:31:00Z"
       }
     }
   ],
@@ -481,7 +481,7 @@ Content-Type: application/json
   "batchId": "batch456",
   "status": "queued",
   "totalItems": 3,
-  "estimatedCompletionTime": "2024-01-15T10:35:00Z",
+  "estimatedCompletionTime": "2025-07-25T10:35:00Z",
   "results": [] // Will be populated as analysis completes
 }
 
@@ -521,8 +521,8 @@ GET /api/v1/analysis/trends?timeframe=1h&platforms=twitter,youtube&riskLevel=hig
 {
   "timeframe": {
     "duration": "1h",
-    "start": "2024-01-15T09:30:00Z",
-    "end": "2024-01-15T10:30:00Z"
+    "start": "2025-07-25T09:30:00Z",
+    "end": "2025-07-25T10:30:00Z"
   },
   "summary": {
     "totalTrends": 15,
@@ -543,7 +543,7 @@ GET /api/v1/analysis/trends?timeframe=1h&platforms=twitter,youtube&riskLevel=hig
       },
       "contentCount": 1850,
       "engagementTotal": 125000,
-      "firstDetected": "2024-01-15T09:45:00Z"
+      "firstDetected": "2025-07-25T09:45:00Z"
     }
   ]
 }
@@ -566,7 +566,7 @@ Content-Type: application/json
 {
   "analysisId": "analysis123",
   "status": "queued",
-  "estimatedCompletionTime": "2024-01-15T10:35:00Z",
+  "estimatedCompletionTime": "2025-07-25T10:35:00Z",
   "parameters": {
     "timeframe": "1h",
     "platforms": ["twitter", "youtube"]
@@ -610,8 +610,8 @@ GET /api/v1/alerts?severity=high&status=open&limit=20
         "taken": []
       },
       "timestamps": {
-        "created": "2024-01-15T10:15:00Z",
-        "lastUpdated": "2024-01-15T10:20:00Z"
+        "created": "2025-07-25T10:15:00Z",
+        "lastUpdated": "2025-07-25T10:20:00Z"
       },
       "assignee": null,
       "priority": "urgent"
@@ -630,7 +630,7 @@ Content-Type: application/json
   "acknowledgedBy": "admin123",
   "comment": "Investigating with platform partners",
   "action": "escalate_to_platforms",
-  "estimatedResolutionTime": "2024-01-15T11:00:00Z"
+  "estimatedResolutionTime": "2025-07-25T11:00:00Z"
 }
 
 # Response
@@ -638,7 +638,7 @@ Content-Type: application/json
   "alertId": "alert456",
   "status": "acknowledged",
   "acknowledgedBy": "admin123",
-  "acknowledgedAt": "2024-01-15T10:25:00Z",
+  "acknowledgedAt": "2025-07-25T10:25:00Z",
   "comment": "Investigating with platform partners"
 }
 ```
@@ -655,7 +655,7 @@ GET /api/v1/dashboard/overview
   "systemStatus": {
     "status": "operational",
     "uptime": "99.95%",
-    "lastIncident": "2024-01-10T15:30:00Z"
+    "lastIncident": "2025-07-20T15:30:00Z"
   },
   "processing": {
     "contentIngested24h": 2450000,
@@ -704,7 +704,7 @@ ws://localhost:3000/api/v1/dashboard/realtime
 # Real-time updates received:
 {
   "type": "metrics_update",
-  "timestamp": "2024-01-15T10:30:00Z",
+  "timestamp": "2025-07-25T10:30:00Z",
   "data": {
     "processing": {
       "queueSize": 1485,
@@ -1052,8 +1052,8 @@ export const mockTwitterContent = {
     comments: 5
   },
   timestamps: {
-    published: new Date('2024-01-15T10:00:00Z'),
-    ingested: new Date('2024-01-15T10:01:00Z')
+    published: new Date('2025-07-25T10:00:00Z'),
+    ingested: new Date('2025-07-25T10:01:00Z')
   },
   language: 'en',
   status: 'pending' as const
@@ -1651,7 +1651,7 @@ echo "$MEMORY"
 
 ## 🗺️ Roadmap & Future Enhancements
 
-### Phase 2 - Enhanced Intelligence (Q2 2024)
+### Phase 2 - Enhanced Intelligence (Q4 2025)
 
 **Advanced ML Capabilities**
 - Online learning and model adaptation
@@ -1671,7 +1671,7 @@ echo "$MEMORY"
 - Customizable alert systems
 - API rate limiting improvements
 
-### Phase 3 - Platform Expansion (Q3 2024)
+### Phase 3 - Platform Expansion (Q1 2026)
 
 **New Platform Integrations**
 - Discord, Telegram, Snapchat
@@ -1691,7 +1691,7 @@ echo "$MEMORY"
 - Cross-organization alerts
 - Industry threat sharing
 
-### Phase 4 - Enterprise & Compliance (Q4 2024)
+### Phase 4 - Enterprise & Compliance (Q2 2026)
 
 **Enterprise Security**
 - SOC 2 Type II compliance
@@ -1756,6 +1756,6 @@ echo "$MEMORY"
 
 *🛡️ Built with ❤️ for a safer internet - Protecting digital communities through intelligent content safety*
 
-**Version:** 1.0.0  
-**Last Updated:** January 15, 2024  
-**Next Review:** February 15, 2024
+**Version:** 2.0.0  
+**Last Updated:** July 25, 2025  
+**Next Review:** August 25, 2025
